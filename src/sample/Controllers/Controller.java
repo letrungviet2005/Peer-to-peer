@@ -125,15 +125,16 @@ public class Controller {
             connectionButton.setText("Start");
         }
     }
-    public void startConnection(){
-        if( Server.getInstance().isConnected() == false && Server.getInstance().isSearching() == false ){
-            Server.getInstance().setConnection();
-            connectionButton.setText("Wating");
-        }
-    }
+//    public void startConnection(){
+//        if( Server.getInstance().isConnected() == false && Server.getInstance().isSearching() == false ){
+//            Server.getInstance().setConnection();
+//            connectionButton.setText("Wating");
+//        }
+//    }
     public void setConnectionButtonText(String s){
         connectionButton.setText(s);
     }
+    
 
     public void choosedirectory(ActionEvent event) {
         DirectoryChooser directoryChooser = new DirectoryChooser();

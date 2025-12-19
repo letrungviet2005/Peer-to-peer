@@ -41,19 +41,7 @@
                 <Insets left="10.0" right="10.0" />
             </padding>
         </JFXSlider>
-        <JFXButton buttonType="RAISED" layoutX="295.0" layoutY="24.0" onAction="#addText" ripplerFill="#d07b7b" style="-fx-background-color: #4979cc;" text="Add" textFill="WHITE" />
-        <JFXTextField fx:id="addTextLabel" layoutX="119.0" layoutY="6.0" prefHeight="25.0" prefWidth="168.0" promptText="Enter the text to add" />
-        <JFXSlider fx:id="textSize" layoutX="119.0" layoutY="47.0" max="30.0" min="1.0" prefHeight="14.0" prefWidth="168.0" value="15.0" />
-        <Label layoutX="174.0" layoutY="60.0" text="Text Input">
-            <font>
-                <Font name="System Bold" size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="471.0" layoutY="60.0" text="Paint Input">
-            <font>
-                <Font name="System Bold" size="15.0" />
-            </font>
-        </Label>
+
 
     </children>
 </AnchorPane>

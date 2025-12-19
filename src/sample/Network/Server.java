@@ -31,7 +31,7 @@ public class Server {
 
     private boolean connected;
     private boolean searching = false;
-    private boolean isHost = false;   
+    private boolean isHost = true;   
     
     public boolean isHost() {
         return isHost;
@@ -137,32 +137,34 @@ public class Server {
                         image = transferObject.getImage();
                         Screenshare.getInstance().setImage(image);
 
-                    } else if(transferObject.getState() == 2){
-                        Preferences preferences = Preferences.userNodeForPackage(Controller.class);
-                        String destinationFolder = preferences.get(
-                                "downloadDirectory","G:\\JavaFX\\New folder\\"
-                        );
-
-                        File dstfile = new File(
-                                destinationFolder + "\\" + transferObject.getFilename()
-                        );
-
-                        FileOutputStream fos = new FileOutputStream(dstfile);
-                        fos.write(transferObject.getFileData());
-                        fos.close();
-
-                        Platform.runLater(() -> {
-                            TrayNotification tray = new TrayNotification();
-                            tray.setTitle("New File");
-                            tray.setMessage("New file was downloaded");
-                            tray.setRectangleFill(Paint.valueOf("#2A9A84"));
-                            tray.setAnimationType(AnimationType.POPUP);
-                            tray.showAndDismiss(Duration.seconds(2));
-                            Notifications.getInstance()
-                                    .addData("New file was downloaded");
-                        });
-
-                    } else if(transferObject.getState() == 3){
+                    }
+//                    else if(transferObject.getState() == 2){
+//                        Preferences preferences = Preferences.userNodeForPackage(Controller.class);
+//                        String destinationFolder = preferences.get(
+//                                "downloadDirectory","G:\\JavaFX\\New folder\\"
+//                        );
+//
+//                        File dstfile = new File(
+//                                destinationFolder + "\\" + transferObject.getFilename()
+//                        );
+//
+//                        FileOutputStream fos = new FileOutputStream(dstfile);
+//                        fos.write(transferObject.getFileData());
+//                        fos.close();
+//
+//                        Platform.runLater(() -> {
+//                            TrayNotification tray = new TrayNotification();
+//                            tray.setTitle("New File");
+//                            tray.setMessage("New file was downloaded");
+//                            tray.setRectangleFill(Paint.valueOf("#2A9A84"));
+//                            tray.setAnimationType(AnimationType.POPUP);
+//                            tray.showAndDismiss(Duration.seconds(2));
+//                            Notifications.getInstance()
+//                                    .addData("New file was downloaded");
+//                        });
+//
+//                    }
+                    else if(transferObject.getState() == 3){
                         String message = transferObject.getString();
                         ChatMessages.getInstance().addToList("peer", message);
 

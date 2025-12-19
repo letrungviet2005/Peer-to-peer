@@ -14,7 +14,7 @@
             fx:controller="sample.Controllers.Controller">
 
     <!-- ================= HEADER ================= -->
-    <HBox spacing="15"
+<HBox spacing="15"
       alignment="CENTER_LEFT"
       prefHeight="70"
       AnchorPane.topAnchor="0"
@@ -23,38 +23,40 @@
       style="-fx-padding: 10 20 10 20;
              -fx-background-color: #1e5fd8;">
 
-        <ImageView fitHeight="45" preserveRatio="true">
-            <image>
-                <Image url="@../Images/teaching.png"/>
-            </image>
-        </ImageView>
+    <ImageView fitHeight="45" preserveRatio="true">
+        <image>
+            <Image url="@../Images/teaching.png"/>
+        </image>
+    </ImageView>
 
-        <Label text="Four Stars" textFill="WHITE">
-            <font>
-                <Font size="34"/>
-            </font>
-        </Label>
+    <Label text="Four Stars" textFill="WHITE">
+        <font>
+            <Font size="34"/>
+        </font>
+    </Label>
 
-        <Region HBox.hgrow="ALWAYS"/>
+    <Region HBox.hgrow="ALWAYS"/>
 
-        <JFXButton fx:id="connectionButton"
-                   text="Connected"
-                   onAction="#startConnection"
+    <!-- HOST -->
+    <JFXButton text="Host"
+               onAction="#startAsHost"
+               style="-fx-background-color: #2ecc71;"
+               textFill="WHITE"/>
+
+    <!-- CLIENT -->
+    <JFXButton text="Join"
+               onAction="#startAsClient"
+               style="-fx-background-color: #f39c12;"
+               textFill="WHITE"/>
+               
+                <JFXButton fx:id="connectionButton"
+                   text=""
                    style="-fx-background-color: #4979cc;"
                    textFill="WHITE"/>
 
-        <JFXButton onAction="#checkConnection"
-                   style="-fx-background-color: #4f8dda;"
-                   contentDisplay="GRAPHIC_ONLY">
-            <graphic>
-                <ImageView fitHeight="20" preserveRatio="true">
-                    <image>
-                        <Image url="@../Images/refresh.png"/>
-                    </image>
-                </ImageView>
-            </graphic>
-        </JFXButton>
-    </HBox>
+</HBox>
+
+    
 
     <!-- ================= TAB PANE ================= -->
     <TabPane tabClosingPolicy="UNAVAILABLE"
