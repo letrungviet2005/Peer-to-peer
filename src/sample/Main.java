@@ -47,12 +47,7 @@ public class Main extends Application {
             Platform.exit(); // Stage Exit
             System.exit(0); // All thread Close
         });
-       /* scene.setOnKeyTyped(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                System.out.println(keyEvent.getCharacter());
-            }
-        });*/
+
         primaryStage.show();
         // android.widget.Toast.makeText(, "", Toast.LENGTH_SHORT).show();
     }
