@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="Dependencies/sqlite-jdbc-3.32.3.2.jar"/>
+	<classpathentry kind="lib" path="Dependencies/TrayTester.jar"/>
+	<classpathentry kind="lib" path="Dependencies/webcam-capture-0.3.13-20200330.202351-7.jar"/>
+	<classpathentry kind="lib" path="D:/Downloads/openjfx-21.0.9_windows-x64_bin-sdk/javafx-sdk-21.0.9/lib/javafx.swing.jar"/>
+	<classpathentry kind="lib" path="D:/Downloads/openjfx-21.0.9_windows-x64_bin-sdk/javafx-sdk-21.0.9/lib/javafx.web.jar"/>
+	<classpathentry kind="lib" path="D:/Downloads/openjfx-21.0.9_windows-x64_bin-sdk/javafx-sdk-21.0.9/lib/javafx.base.jar"/>
+	<classpathentry kind="lib" path="D:/Downloads/openjfx-21.0.9_windows-x64_bin-sdk/javafx-sdk-21.0.9/lib/javafx.controls.jar"/>
+	<classpathentry kind="lib" path="D:/Downloads/openjfx-21.0.9_windows-x64_bin-sdk/javafx-sdk-21.0.9/lib/javafx.fxml.jar"/>
+	<classpathentry kind="lib" path="D:/Downloads/openjfx-21.0.9_windows-x64_bin-sdk/javafx-sdk-21.0.9/lib/javafx.graphics.jar"/>
+	<classpathentry kind="lib" path="D:/Downloads/openjfx-21.0.9_windows-x64_bin-sdk/javafx-sdk-21.0.9/lib/javafx.media.jar"/>
+	<classpathentry kind="lib" path="D:/Downloads/openjfx-21.0.9_windows-x64_bin-sdk/javafx-sdk-21.0.9/lib/javafx-swt.jar"/>
+	<classpathentry kind="lib" path="D:/Downloads/jfoenix-9.0.8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

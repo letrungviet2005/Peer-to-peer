@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefWidth="576" prefHeight="476"
+            style="-fx-background-color: #cc4954;"
+            xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controllers.Controller">
+
+    <!-- ================= HEADER ================= -->
+    <HBox spacing="15"
+      alignment="CENTER_LEFT"
+      prefHeight="70"
+      AnchorPane.topAnchor="0"
+      AnchorPane.leftAnchor="0"
+      AnchorPane.rightAnchor="0"
+      style="-fx-padding: 10 20 10 20;
+             -fx-background-color: #1e5fd8;">
+
+        <ImageView fitHeight="45" preserveRatio="true">
+            <image>
+                <Image url="@../Images/teaching.png"/>
+            </image>
+        </ImageView>
+
+        <Label text="Four Stars" textFill="WHITE">
+            <font>
+                <Font size="34"/>
+            </font>
+        </Label>
+
+        <Region HBox.hgrow="ALWAYS"/>
+
+        <JFXButton fx:id="connectionButton"
+                   text="Connected"
+                   onAction="#startConnection"
+                   style="-fx-background-color: #4979cc;"
+                   textFill="WHITE"/>
+
+        <JFXButton onAction="#checkConnection"
+                   style="-fx-background-color: #4f8dda;"
+                   contentDisplay="GRAPHIC_ONLY">
+            <graphic>
+                <ImageView fitHeight="20" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/refresh.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+    </HBox>
+
+    <!-- ================= TAB PANE ================= -->
+    <TabPane tabClosingPolicy="UNAVAILABLE"
+             AnchorPane.topAnchor="70"
+             AnchorPane.bottomAnchor="0"
+             AnchorPane.leftAnchor="0"
+             AnchorPane.rightAnchor="0">
+
+        <!-- ================= HOME TAB ================= -->
+        <Tab text="Home">
+            <content>
+                <AnchorPane style="-fx-background-color: #eeeeee;">
+                    <GridPane alignment="CENTER"
+                              hgap="30" vgap="25"
+                              AnchorPane.topAnchor="40"
+                              AnchorPane.leftAnchor="40"
+                              AnchorPane.rightAnchor="40">
+
+                        <JFXButton text="Share Screen"
+                                   onAction="#handleButtonAction"
+                                   prefWidth="160" prefHeight="100"
+                                   style="-fx-background-color: #4979cc;"
+                                   textFill="WHITE"/>
+
+                        <JFXButton text="View Share"
+                                   onAction="#goToViewShare"
+                                   prefWidth="160" prefHeight="100"
+                                   GridPane.columnIndex="1"
+                                   style="-fx-background-color: #4979cc;"
+                                   textFill="WHITE"/>
+
+                        <JFXButton text="White Board"
+                                   onAction="#goToCanvas"
+                                   prefWidth="160" prefHeight="100"
+                                   GridPane.columnIndex="2"
+                                   style="-fx-background-color: #4979cc;"
+                                   textFill="WHITE"/>
+
+                        <JFXButton text="Chat"
+                                   onAction="#goToChat"
+                                   prefWidth="160" prefHeight="100"
+                                   GridPane.rowIndex="1"
+                                   style="-fx-background-color: #4979cc;"
+                                   textFill="WHITE"/>
+
+                    </GridPane>
+                </AnchorPane>
+            </content>
+        </Tab>
+
+        <!-- ================= NOTIFICATIONS ================= -->
+        <Tab text="Notifications">
+            <content>
+                <ListView fx:id="notificationList"/>
+            </content>
+        </Tab>
+
+        <!-- ================= SETTINGS ================= -->
+        <Tab text="Settings">
+            <content>
+                <VBox spacing="20" style="-fx-padding: 30;">
+                    <Label text="Download Path">
+                        <font><Font size="18"/></font>
+                    </Label>
+
+                    <HBox spacing="10">
+                        <Label fx:id="directoryLabel"
+                               prefWidth="400"
+                               style="-fx-background-color:#ddd; -fx-padding:8"/>
+                        <JFXButton onAction="#choosedirectory" text="Browse"/>
+                    </HBox>
+                </VBox>
+            </content>
+        </Tab>
+
+    </TabPane>
+</AnchorPane>
